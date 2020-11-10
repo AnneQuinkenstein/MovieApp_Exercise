@@ -10,14 +10,17 @@
 
 <!-- PROJECT LOGO -->
 
-  <h3 align="center">MOVIEAPP EXERCISE</h3>
+  <h3 align="center">MOVIEAPP CodeSchool Test</h3>
 
 <br />
 <p align="center">
+   Objective: 
     Display Movies, mark favorite, which are then shown on the top of the list. 
     Click on Movie to display its Poster. 
     <br />
+    Logic is finished in a two hour text. Styling still tbd. 
     <br />
+    [Demo](https://aquin-movies.netlify.app/)
 </p>
 
 ### Built With
