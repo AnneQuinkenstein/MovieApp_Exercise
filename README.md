@@ -43,9 +43,6 @@
 `data.movies[index].favorite = true`
 -> complete method below
 
-### 2. Click on a favorite Movie to put it back to the nonfavorite Movies on the bottom
-I use the terenary operator: If a property favorite is true, then set it to false. 
-
 ```javascript
   const changeFavorites = (movie, index) => {
     movie.favorite? data.movies[index].favorite = false : data.movies[index].favorite = true;   
@@ -53,13 +50,13 @@ I use the terenary operator: If a property favorite is true, then set it to fals
   }
 ```
 
-### 3. Sort the movie array: 
-top: Movies with favorite set to true; 
-bottom: Movies with no favorite or favorite set to false; 
+### 2. Sort the movie array: 
+Top: Movies with favorite set to true; 
+Bottom: Movies with no favorite or favorite set to false; 
 ` data &&  data.movies.sort((a, b)=> (b.favorite || false) - (a.favorite || false))`
 
-### 4. Display Movie Poster on Click on a single Page 
-#### 1. Routing to a Movie with a certain id: 
+### 3. Display Movie Poster on Click on a single Page 
+#### a. Routing to a Movie with a certain id: 
 
 ```javascript
       <Switch>
@@ -69,7 +66,7 @@ bottom: Movies with no favorite or favorite set to false;
       <Route exact path="/" render={ () => <MoviesList data={data} changeFavorites ={changeFavorites} render={render}/> }/>
       </Switch>
 ```
-#### 2. Select the right id + display right title/ Poster 
+#### b. Select the right id + display right title/ Poster 
 `useParams` to get the parameter of the Movie-URL
 pass the movie-id on click to the single-Page and display the movie wich id equals the parameters of the url
 (`+` to change it from string to number)
@@ -80,11 +77,8 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const DisplayMovie = ({ data }) => {
-
     let { id } = useParams();
-
     const matchedMovie = data && data.movies.find((movie) => (movie.id === +id))
-
     return (
         <>
         <div>
@@ -97,13 +91,17 @@ const DisplayMovie = ({ data }) => {
         </>
     )
 }
-
-
 export default DisplayMovie;
+``` 
+### 4. Click on a favorite Movie to put it back to the nonfavorite Movies on the bottom
+I use the terenary operator: If a property favorite is true, then set it to false. 
+
+```javascript
+  const changeFavorites = (movie, index) => {
+    movie.favorite? data.movies[index].favorite = false : data.movies[index].favorite = true;   
+    setRender(!render); 
+  }
 ```
-
-
-
 
 ### Built With
 
