@@ -40,6 +40,7 @@
 ### 1. If Favorite is clicked: Add a new property "favorite" as a key to the Movie- Objekt + set it to Value "true"
 
 `data.movies[index].favorite = true`
+-> complete method below
 
 ### 2. Click on a favorite Movie to put it back to the nonfacorites   
 I use the terenary operator: If a property favorite already exists and set to true, then set it to false. 
