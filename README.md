@@ -18,7 +18,7 @@
     Display Movies, mark favorite, which are then shown on the top of the list. 
     Click on Movie to display its Poster. 
     <br />
-    Logic is finished in a two hour text. Styling still tbd. 
+    Logic is finished in a two hour test. Styling still tbd. 
     <br />
       <a href="https://aquin-movies.netlify.app/">Demo</a>
 </p>
