@@ -36,7 +36,7 @@
   - on click, the movie shoud be displayed in a different page (you will use React Router for this)
 
 ## my Solution 
-### Click on "Add to Favorites"
+### Click on "Add a Movie to Favorites" 
 
 ### 1. Add a new property "favorite" as a key to the Movie- Objekt + set it to Value "true"
 
