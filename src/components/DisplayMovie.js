@@ -15,7 +15,7 @@ const DisplayMovie = ({ data }) => {
         </div>
         <div>
             <h1> {matchedMovie && matchedMovie.title} </h1>
-            <img src={matchedMovie && matchedMovie.posterUrl} />
+            <img src={matchedMovie && matchedMovie.posterUrl} alt={matchedMovie && matchedMovie.title} />
         </div>
         </>
     )
