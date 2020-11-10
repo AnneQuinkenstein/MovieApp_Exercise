@@ -23,10 +23,88 @@
       <a href="https://aquin-movies.netlify.app/">Demo</a>
 </p>
 
+## Task
+- Fetch movies at [`/movies.json`](https://raw.githubusercontent.com/wildcodeschoolparis/datas/master/movies.json)
+- Display the list of movies 
+  - Create a `Movie` component
+- Place an 'Add to Favourites' button on each `Movie`
+  - on click, movie should be added to the favourite list
+- Display all the favourites on top of the movie list
+- Add a 'Remove from Favourites' button on each favourite
+  - on click, it should be removed from the favourite list
+- Create a `Pick` button 
+  - on click, the movie shoud be displayed in a different page (you will use React Router for this)
+
+## my Solution 
+
+### 1. If Favorite is clicked: Add a new property "favorite" as a key to the Movie- Objekt + set it to Value "true"
+'data.movies[index].favorite = true'
+
+### 2. Click on a favorite Movie to put it back to the nonfacorites   
+I use the terenary operator: If a property favorite already exists and set to true, then set it to false. 
+
+  const changeFavorites = (movie, index) => {
+    movie.favorite? data.movies[index].favorite = false : data.movies[index].favorite = true;   
+    setRender(!render); 
+  }
+
+### 3. Sort the movie array: 
+top: Movies with favorite set to true; 
+bottom: Movies with no favorite or favorite set to false; 
+``` data &&  data.movies.sort((a, b)=> (b.favorite || false) - (a.favorite || false))``` 
+
+### 4. Display Movie Poster on Click on a single Page 
+#### 1. Routing to a Movie with a certain id: 
+
+```javascript
+      <Switch>
+      <Route path="/movie/:id"  render={ () => 
+              <DisplayMovie data={data}/>  
+      } /> 
+      <Route exact path="/" render={ () => <MoviesList data={data} changeFavorites ={changeFavorites} render={render}/> }/>
+      </Switch>
+``` 
+#### 2. Select the right id + display right title/ Poster 
+`useParams` to get the parameter of the Movie-URL
+pass the movie-id on click to the single-Page and display the movie wich id equals the parameters of the url
+(`+` to change it from string to number)
+
+´´´javascript
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+const DisplayMovie = ({ data }) => {
+
+    let { id } = useParams();
+
+    const matchedMovie = data && data.movies.find((movie) => (movie.id === +id))
+
+    return (
+        <>
+        <div>
+        <Link to='/'>Movielist</Link>
+        </div>
+        <div>
+            <h1> {matchedMovie && matchedMovie.title} </h1>
+            <img src={matchedMovie && matchedMovie.posterUrl} alt={matchedMovie && matchedMovie.title} />
+        </div>
+        </>
+    )
+}
+
+
+export default DisplayMovie;
+
+´´´ 
+
+
+
+
 ### Built With
 
 - [React](https://reactjs.org/)
-- [React Router V6](https://reacttraining.com/blog/react-router-v6-pre/)
+- [React Router](https://reacttraining.com/blog/react-router-v6-pre/)
 - [React Context](https://reactjs.org/docs/context.html)
 - [React Hooks](https://reactjs.org/)
 
