@@ -13,7 +13,7 @@
   <h3 align="center">MOVIEAPP CodeSchool Test</h3>
 
 <br />
-<p align="center">
+<p align="left">
    Objective: 
     Display Movies, mark favorite, which are then shown on the top of the list. 
     Click on Movie to display its Poster. 
