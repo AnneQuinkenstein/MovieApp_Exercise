@@ -20,7 +20,7 @@
     <br />
     Logic is finished in a two hour text. Styling still tbd. 
     <br />
-    [Demo](https://aquin-movies.netlify.app/)
+      <a href="https://aquin-movies.netlify.app/">Demo</a>
 </p>
 
 ### Built With
