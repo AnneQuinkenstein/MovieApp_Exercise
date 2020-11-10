@@ -51,8 +51,8 @@
 ```
 
 ### 2. Sort the movie array: 
-Top: Movies with favorite set to true; 
-Bottom: Movies with no favorite or favorite set to false; 
+- Top: Movies with favorite set to true; 
+- Bottom: Movies with no favorite or favorite set to false; 
 ` data &&  data.movies.sort((a, b)=> (b.favorite || false) - (a.favorite || false))`
 
 ### 3. Display Movie Poster on Click on a single Page 
