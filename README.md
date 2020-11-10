@@ -36,14 +36,15 @@
   - on click, the movie shoud be displayed in a different page (you will use React Router for this)
 
 ## my Solution 
+### Click on "Add to Favorites"
 
-### 1. If Favorite is clicked: Add a new property "favorite" as a key to the Movie- Objekt + set it to Value "true"
+### 1. Add a new property "favorite" as a key to the Movie- Objekt + set it to Value "true"
 
 `data.movies[index].favorite = true`
 -> complete method below
 
-### 2. Click on a favorite Movie to put it back to the nonfacorites   
-I use the terenary operator: If a property favorite already exists and set to true, then set it to false. 
+### 2. Click on a favorite Movie to put it back to the nonfavorite Movies on the bottom
+I use the terenary operator: If a property favorite is true, then set it to false. 
 
 ```javascript
   const changeFavorites = (movie, index) => {
