@@ -1,0 +1,35 @@
+.App {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .box {
+      display: flex;
+      flex-direction: column;
+      .imgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 500px;
+      }
+      img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      p {
+        display: flex;
+        justify-content: center;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.fa-star {
+  color: red;
+}
