@@ -2,17 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Movie = ({ movie, changeFavorites, index }) => {
+  console.log("movie", movie);
   return (
     <div className="container">
       <div className="box">
         <Link to={`movie/${movie.id}`}>
           <div className="image-container">
-            <img src={movie.posterUrl} alt={movie.title} />{" "}
+            <img
+              src={movie.posterUrl}
+              alt={movie.title}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "https://upload.wikimedia.org/wikipedia/en/6/67/Higgins_the_Dog.jpg";
+              }}
+            />{" "}
           </div>
-          <p> {movie.title} </p>
         </Link>
       </div>
-      <div className="">
+      <div className="star">
         <div onClick={() => changeFavorites(movie, index)}>
           {movie.favorite ? (
             <i class="fa fa-star"></i>

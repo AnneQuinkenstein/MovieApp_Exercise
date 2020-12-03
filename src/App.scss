@@ -3,33 +3,36 @@
   justify-content: space-around;
   flex-wrap: wrap;
   .container {
+    position: relative;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     .box {
       display: flex;
       flex-direction: column;
-      .imgContainer {
+      margin: 20px;
+      .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
         height: 500px;
+        padding: 20px;
+        border: 5px solid black;
       }
       img {
         flex-shrink: 0;
         min-width: 100%;
         min-height: 100%;
       }
-      p {
-        display: flex;
-        justify-content: center;
-        font-weight: 900;
+    }
+    .star {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      .fa-star, .fa-star-o {
+        color: red;
+        font-size: 50px;
       }
     }
   }
-}
-
-.fa-star {
-  color: red;
 }
