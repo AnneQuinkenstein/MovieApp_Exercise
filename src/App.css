@@ -80,7 +80,7 @@ body {
 
 .displayMovie .title {
   text-align: center;
-  color: #e2da00;
+  color: #75b8ec;
 }
 
 .displayMovie .title a {
@@ -91,7 +91,7 @@ body {
 
 .displayMovie .title a .fa-long-arrow-left {
   font-size: 40px;
-  color: #e2da00;
+  color: #75b8ec;
   -webkit-animation: slide1 1s ease-in-out infinite;
           animation: slide1 1s ease-in-out infinite;
   margin-left: 9px;
@@ -119,7 +119,7 @@ body {
   width: 40vw;
   margin-top: 10vh;
   min-width: 300px;
-  color: #e2da00;
+  color: #75b8ec;
 }
 
 .displayMovie .movieInfos .infos .row {

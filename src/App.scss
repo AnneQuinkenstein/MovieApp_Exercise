@@ -55,13 +55,13 @@ body {
       top: 1vh;
       .fa-long-arrow-left {
         font-size: 40px;
-        color: #e2da00;
+        color:#75b8ec;
         animation: slide1 1s ease-in-out infinite;
         margin-left: 9px;
       }
     }
     text-align: center;
-    color: #e2da00;
+    color:#75b8ec;
   }
   .movieInfos {
     display: flex;
@@ -78,7 +78,7 @@ body {
       width: 40vw;
       margin-top: 10vh;
       min-width: 300px;
-      color: #e2da00;
+      color:#75b8ec;
       .row {
         display: flex;
       }
