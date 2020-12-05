@@ -6,27 +6,28 @@ const Movie = ({ movie, changeFavorites, index }) => {
   return (
     <div className="container">
       <div className="box">
-        <Link to={`movie/${movie.id}`}>
-          <div className="image-container">
+      <Link to={`movie/${movie.id}`}>
+        <div className="image-container">
+         
             <img
               src={movie.posterUrl}
               alt={movie.title}
               onError={(e) => {
                 e.target.onerror = null;
-                e.target.src =
-                  "https://upload.wikimedia.org/wikipedia/en/6/67/Higgins_the_Dog.jpg";
+                e.target.parentNode.parentNode.parentNode.className = "noPic";
               }}
             />{" "}
+         
           </div>
-        </Link>
-      </div>
-      <div className="star">
-        <div onClick={() => changeFavorites(movie, index)}>
-          {movie.favorite ? (
-            <i class="fa fa-star"></i>
-          ) : (
-            <i class="fa fa-star-o"></i>
-          )}
+          </Link>
+          <div className="star">
+            <div onClick={() => changeFavorites(movie, index)}>
+              {movie.favorite ? (
+                <i class="fa fa-star"></i>
+              ) : (
+                <i class="fa fa-star-o"></i>
+              )}
+            </div>
         </div>
       </div>
     </div>
