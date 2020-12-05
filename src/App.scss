@@ -20,6 +20,12 @@ body {
   min-height: 100vh;
 }
 
+.singleMovie{
+  height: 100vh; 
+  width: 100%; 
+  overflow: hidden; 
+}
+
 .App {
   display: flex;
   justify-content: space-around;
@@ -73,13 +79,13 @@ body {
       top: 1vh;
       .fa-long-arrow-left {
         font-size: 40px;
-        color: #75b8ec;
+        color: #abb2b9;
         animation: slide1 1s ease-in-out infinite;
         margin-left: 9px;
       }
     }
     text-align: center;
-    color: #75b8ec;
+    color: #abb2b9;
   }
   .movieInfos {
     display: flex;
@@ -90,13 +96,22 @@ body {
       margin-top: 2vh;
       img {
         height: 80vh;
+        &:hover{
+          position: relative; 
+          z-index: 5; 
+          transform: scale(1.05); 
+        }
       }
     }
     .infos {
       width: 40vw;
       margin-top: 10vh;
       min-width: 300px;
-      color: #75b8ec;
+      color: #abb2b9;
+      font-family: "lato", sans-serif;
+      font-weight: 900;
+      font-size: 1.05rem;
+      }
       .row {
         display: flex;
       }
@@ -109,7 +124,7 @@ body {
       }
     }
   }
-}
+
 
 .title {
   color: #fff;
