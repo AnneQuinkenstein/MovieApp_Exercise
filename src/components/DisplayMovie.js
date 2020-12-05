@@ -10,7 +10,7 @@ const DisplayMovie = ({ data }) => {
   return (
     <div className="displayMovie">
       <div className="title">
-        <Link to="/">Movielist</Link>
+        <Link to="/"> <i class="fa fa-long-arrow-left" aria-hidden="true"></i> </Link>
         <h1> {matchedMovie && matchedMovie.title} </h1>
       </div>
       <div className="movieInfos">

@@ -84,6 +84,10 @@
   top: 1vh;
 }
 
+.displayMovie .title a .fa-long-arrow-left {
+  font-size: 40px;
+}
+
 .displayMovie .movieInfos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,13 +112,13 @@
   min-width: 300px;
 }
 
-.row {
+.displayMovie .movieInfos .infos .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.col1 {
+.displayMovie .movieInfos .infos .col1 {
   -webkit-box-flex: 0.2;
       -ms-flex: 0.2 1;
           flex: 0.2 1;
@@ -123,7 +127,7 @@
   width: max-content;
 }
 
-.col2 {
+.displayMovie .movieInfos .infos .col2 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;

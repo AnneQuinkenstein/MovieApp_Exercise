@@ -51,6 +51,9 @@ $noPic: none;
       position: absolute;
       left: 1vw;
       top: 1vh;
+      .fa-long-arrow-left{
+        font-size: 40px;
+      }
     }
     text-align: center;
   }
@@ -61,7 +64,6 @@ $noPic: none;
     .poster {
       width: 40vw;
       margin-top: 2vh;
-      // border: 2px solid red;
       img {
         height: 80vh;
       }
@@ -69,20 +71,18 @@ $noPic: none;
     .infos {
       width: 40vw;
       margin-top: 10vh;
-      // border: 2px solid green;
       min-width: 300px;
+      .row{
+        display: flex; 
+      }
+      .col1{
+        flex: 0.2 1; 
+        width: max-content; 
+      } 
+      .col2{
+        flex: 1 1; 
+      } 
     }
   }
 }
 
-.row{
-  display: flex; 
-}
-.col1{
-  flex: 0.2 1; 
-  width: max-content; 
-} 
-
-.col2{
-  flex: 1 1; 
-} 
