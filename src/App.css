@@ -1,3 +1,7 @@
+body {
+  background-image: url(./bokeh-photography-720459.jpg);
+}
+
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +90,9 @@
 
 .displayMovie .title a .fa-long-arrow-left {
   font-size: 40px;
+  -webkit-animation: slide1 1s ease-in-out infinite;
+          animation: slide1 1s ease-in-out infinite;
+  margin-left: 9px;
 }
 
 .displayMovie .movieInfos {
@@ -131,5 +138,29 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
+}
+
+@-webkit-keyframes slide1 {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
 }
 /*# sourceMappingURL=App.css.map */

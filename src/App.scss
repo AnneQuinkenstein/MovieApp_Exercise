@@ -1,4 +1,6 @@
-$noPic: none;
+body{
+  background-image: url(./bokeh-photography-720459.jpg);
+}
 
 .App {
   display: flex;
@@ -53,6 +55,8 @@ $noPic: none;
       top: 1vh;
       .fa-long-arrow-left{
         font-size: 40px;
+        animation: slide1 1s ease-in-out infinite;
+        margin-left: 9px;
       }
     }
     text-align: center;
@@ -83,6 +87,17 @@ $noPic: none;
         flex: 1 1; 
       } 
     }
+  }
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
   }
 }
 
