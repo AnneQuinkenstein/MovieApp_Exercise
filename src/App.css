@@ -20,6 +20,12 @@
   margin: 20px;
 }
 
+.App .box:hover {
+  overflow: visible;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 .App .box .image-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,12 +41,6 @@
   padding: 20px;
 }
 
-.App .box .image-container:hover {
-  overflow: visible;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
 .App .box .image-container img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -50,7 +50,6 @@
 
 .App .star {
   position: absolute;
-  z-index: 5;
   right: 15px;
   top: 15px;
 }

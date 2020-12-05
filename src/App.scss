@@ -9,6 +9,10 @@ $noPic: none;
     display: flex;
     flex-direction: column;
     margin: 20px;
+    &:hover {
+      overflow: visible;
+      transform: scale(1.5); 
+    }
     .image-container {
       display: flex;
       justify-content: center;
@@ -16,10 +20,6 @@ $noPic: none;
       overflow: hidden;
       height: 25vh;
       padding: 20px;
-      &:hover {
-        overflow: visible;
-        transform: scale(1.5)
-      }
       img {
         flex-shrink: 0;
         max-width: 100%;
@@ -29,7 +29,6 @@ $noPic: none;
   }
   .star {
     position: absolute;
-    z-index: 5;
     right: 15px;
     top: 15px;
     .fa-star,
