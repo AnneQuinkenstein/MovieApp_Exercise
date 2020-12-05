@@ -54,9 +54,9 @@
   top: 15px;
 }
 
-.App .star .fa-star,
-.App .star .fa-star-o {
-  color: #f40707;
+.App .star .fa-heart,
+.App .star .fa-heart-o {
+  color: #d21d14;
   font-size: 30px;
 }
 

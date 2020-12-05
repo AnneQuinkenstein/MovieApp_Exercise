@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Movie = ({ movie, changeFavorites, index }) => {
-  console.log("movie", movie);
   return (
     <div className="box">
       <Link to={`movie/${movie.id}`}>
@@ -20,9 +19,9 @@ const Movie = ({ movie, changeFavorites, index }) => {
       <div className="star">
         <div onClick={() => changeFavorites(movie, index)}>
           {movie.favorite ? (
-            <i class="fa fa-star"></i>
+            <i class="fa fa-heart"></i>
           ) : (
-            <i class="fa fa-star-o"></i>
+            <i class="fa fa-heart-o"></i>
           )}
         </div>
       </div>
