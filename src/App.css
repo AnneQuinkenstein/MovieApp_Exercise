@@ -63,4 +63,48 @@
 .noPic {
   display: none;
 }
+
+.displayMovie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.displayMovie .title {
+  text-align: center;
+}
+
+.displayMovie .title a {
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+}
+
+.displayMovie .movieInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.displayMovie .movieInfos .poster {
+  width: 40vw;
+  margin-top: 2vh;
+}
+
+.displayMovie .movieInfos .poster img {
+  height: 80vh;
+}
+
+.displayMovie .movieInfos .infos {
+  width: 40vw;
+  margin-top: 10vh;
+  min-width: 300px;
+}
 /*# sourceMappingURL=App.css.map */

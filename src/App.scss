@@ -11,7 +11,7 @@ $noPic: none;
     margin: 20px;
     &:hover {
       overflow: visible;
-      transform: scale(1.5); 
+      transform: scale(1.5);
     }
     .image-container {
       display: flex;
@@ -33,7 +33,7 @@ $noPic: none;
     top: 15px;
     .fa-heart,
     .fa-heart-o {
-      color:#d21d14;
+      color: #d21d14;
       font-size: 30px;
     }
   }
@@ -41,4 +41,36 @@ $noPic: none;
 
 .noPic {
   display: none;
+}
+
+.displayMovie {
+  display: flex;
+  flex-direction: column;
+  .title{
+    a{
+      position: absolute;
+      left: 1vw;
+      top: 1vh;
+    }
+    text-align: center;
+  }
+  .movieInfos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    .poster {
+      width: 40vw;
+      margin-top: 2vh;
+      // border: 2px solid red;
+      img {
+        height: 80vh;
+      }
+    }
+    .infos {
+      width: 40vw;
+      margin-top: 10vh;
+      // border: 2px solid green;
+      min-width: 300px;
+    }
+  }
 }
