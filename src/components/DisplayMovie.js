@@ -21,12 +21,36 @@ const DisplayMovie = ({ data }) => {
           />
         </div>
         <div className="infos">
-          <p> Year: {matchedMovie && matchedMovie.year} </p>
-          <p> Director: {matchedMovie && matchedMovie.director} </p>
-          <p> Actors: {matchedMovie && matchedMovie.actors} </p>
-          <p> Genres: {matchedMovie && matchedMovie.genres} </p>
-          <p> Plot: {matchedMovie && matchedMovie.plot} </p>
-          <p> Rutime: {matchedMovie && matchedMovie.runtime} </p>
+          <p className="row">
+            {" "}
+            <p className="col1">Year:</p>{" "}
+            <p className="col2"> {matchedMovie && matchedMovie.year}</p>{" "}
+          </p>
+          <p className="row">
+            {" "}
+            <p className="col1">Director:</p>{" "}
+            <p className="col2"> {matchedMovie && matchedMovie.director}</p>{" "}
+          </p>
+          <p className="row">
+            {" "}
+            <p className="col1">Actors:</p>{" "}
+            <p className="col2"> {matchedMovie && matchedMovie.actors}</p>{" "}
+          </p>
+          <p className="row">
+            {" "}
+            <p className="col1">Genres:</p>{" "}
+            <p className="col2"> {matchedMovie && matchedMovie.genres}</p>{" "}
+          </p>
+          <p className="row">
+            {" "}
+            <p className="col1">Plot:</p>{" "}
+            <p className="col2"> {matchedMovie && matchedMovie.plot}</p>{" "}
+          </p>
+          <p className="row">
+            {" "}
+            <p className="col1">Rutime:</p>{" "}
+            <p className="col2">{matchedMovie && matchedMovie.runtime}</p>{" "}
+          </p>
         </div>
       </div>
     </div>
