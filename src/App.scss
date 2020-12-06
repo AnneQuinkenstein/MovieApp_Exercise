@@ -31,6 +31,11 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  @media (max-width: 767px) {
+    overflow: unset;
+    width: unset;
+    height: unset;
+  }
 }
 
 .App {
@@ -45,6 +50,9 @@ body {
     &:hover {
       overflow: visible;
       transform: scale(1.2);
+    }
+    @media (max-width: 767px) {
+      margin: 0;
     }
     .image-container {
       display: flex;
@@ -98,9 +106,17 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
     .poster {
       width: 40vw;
-      margin-left: auto; 
+      margin-left: auto;
+      @media (max-width: 767px) {
+        width: unset;
+        margin-left: unset;
+      }
       img {
         height: 80vh;
         position: relative;
@@ -108,13 +124,12 @@ body {
       }
     }
     .infos {
-      @include stealtitle()
-      width: 40vw;
+      @include stealtitle() width: 40vw;
       margin-top: 10vh;
       min-width: 300px;
       font-weight: 900;
       font-size: 1.05rem;
-      margin-right: 5vw; 
+      margin-right: 5vw;
     }
     .row {
       display: flex;
@@ -136,8 +151,11 @@ body {
   letter-spacing: 10px;
   margin-top: -2vh;
   padding-left: 10px;
+  @media (max-width: 767px) {
+    margin-top: 2vh; 
+  }
   h1 {
-    @include stealtitle(); 
+    @include stealtitle();
   }
 }
 
