@@ -37,6 +37,15 @@ body {
   }
 }
 
+h1{
+  @include stealtitle(); 
+  text-align: center; 
+  font-weight: 900;
+  font-size: 4vh;
+  letter-spacing: 10px;
+  margin-top: 2vh;
+}
+
 .App {
   display: flex;
   justify-content: space-around;

@@ -29,7 +29,7 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div>
       <Switch>
       <Route path="/movie/:id"  render={ () => 
               <DisplayMovie data={data}/>  

@@ -6,17 +6,20 @@ const MoviesList = ({ data, changeFavorites, render }) => {
     data.movies.sort((a, b) => (b.favorite || false) - (a.favorite || false));
 
   return (
-    <div className="App">
-      {data &&
-        data.movies.map((movie, index) => (
-          <Movie
-            movie={movie}
-            key={movie.id}
-            index={index}
-            changeFavorites={changeFavorites}
-          />
-        ))}
-    </div>
+    <>
+      <h1> Famous Movies </h1>
+      <div className="App">
+        {data &&
+          data.movies.map((movie, index) => (
+            <Movie
+              movie={movie}
+              key={movie.id}
+              index={index}
+              changeFavorites={changeFavorites}
+            />
+          ))}
+      </div>
+    </>
   );
 };
 
