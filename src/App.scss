@@ -32,7 +32,6 @@ body {
   width: 100%;
   overflow: hidden;
   @media (max-width: 767px) {
-    overflow: unset;
     width: unset;
     height: unset;
   }
@@ -115,7 +114,7 @@ body {
       margin-left: auto;
       @media (max-width: 767px) {
         width: unset;
-        margin-left: unset;
+        margin: auto;
       }
       img {
         height: 80vh;
@@ -152,7 +151,7 @@ body {
   margin-top: -2vh;
   padding-left: 10px;
   @media (max-width: 767px) {
-    margin-top: 2vh; 
+    margin: auto;
   }
   h1 {
     @include stealtitle();
