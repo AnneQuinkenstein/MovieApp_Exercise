@@ -16,7 +16,7 @@ const DisplayMovie = ({ data }) => {
         <div className="title">
           <Link to="/">
             {" "}
-            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>{" "}
+            <i className="fa fa-long-arrow-left" aria-hidden="true"></i>{" "}
           </Link>
           <h1> {matchedMovie && matchedMovie.title} </h1>
         </div>

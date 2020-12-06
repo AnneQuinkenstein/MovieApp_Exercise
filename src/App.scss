@@ -248,3 +248,20 @@ h1 {
     transform: translate(5px, 0);
   }
 }
+
+.singleMovie-enter {
+  opacity: 0;
+}
+.singleMovie-exit{
+  opacity: 1;
+}
+.singleMovie-enter-active{
+  opacity: 1;
+}
+.singleMovie-exit-active{
+  opacity: 0;
+}
+.singleMovie-enter-active,
+.singleMovie-exit-active{
+  transition: opacity 500ms;
+}

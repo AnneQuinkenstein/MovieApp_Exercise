@@ -1,9 +1,9 @@
 import React from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 import Movie from "./Movie";
 
 const MoviesList = ({ data, changeFavorites, render }) => {
-  data &&
-    data.movies.sort((a, b) => (b.favorite || false) - (a.favorite || false));
+  data && data.movies.sort((a, b) => b.favorite - a.favorite);
 
   return (
     <>
@@ -11,12 +11,16 @@ const MoviesList = ({ data, changeFavorites, render }) => {
       <div className="App">
         {data &&
           data.movies.map((movie, index) => (
-            <Movie
-              movie={movie}
-              key={movie.id}
-              index={index}
-              changeFavorites={changeFavorites}
-            />
+            <SwitchTransition>
+              <CSSTransition key={movie.favorite} classNames="singleMovie">
+                <Movie
+                  movie={movie}
+                  key={movie.id}
+                  index={index}
+                  changeFavorites={changeFavorites}
+                />
+              </CSSTransition>
+            </SwitchTransition>
           ))}
       </div>
     </>
