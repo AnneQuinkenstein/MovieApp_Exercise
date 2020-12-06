@@ -30,6 +30,8 @@ const App = () => {
     setRender(!render);
   };
 
+  console.log(data && data.genres); 
+
   return (
     <div>
       <Switch>
