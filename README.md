@@ -9,7 +9,7 @@
 <h3 align="center">MOVIEAPP CodeSchool Test</h3>
 <br />
 <p align="center">
-  <a href="https://aquin-movies.netlify.app/">
+  <a href="https://aquin-movies.netlify.app/" target="blank">
     <img src="https://i.imgur.com/G23xev4.png" alt="Logo" width="300" height="160">
   </a>
   
@@ -20,7 +20,7 @@
       <br />
       Logic is finished in a two hour test. I did the Styling afterwards. 
       <br />
-        <a href="https://aquin-movies.netlify.app/">Demo</a>
+        <a href="https://aquin-movies.netlify.app/" target="blank">Demo</a>
   </p>
 </p>
 
