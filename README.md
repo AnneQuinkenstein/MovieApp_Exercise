@@ -11,14 +11,15 @@
   
 
 <br />
-
+<h3 align="center">MOVIEAPP CodeSchool Test</h3>
+<br />
 <p align="center">
   <a href="aquin-movies.netlify.app/">
     <img src="https://i.imgur.com/G23xev4.png" alt="Logo" width="300" height="160">
   </a>
-  <h3 align="center">MOVIEAPP CodeSchool Test</h3>
+  
   <p align="center">
-    ## Objective: 
+     <mark>Objective: </mark>
       Display Movies, mark favorite, which are then shown on the top of the list. 
       Click on Movie to display its Poster. 
       <br />
