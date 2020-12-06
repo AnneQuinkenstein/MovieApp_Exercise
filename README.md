@@ -1,5 +1,5 @@
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links-->
-<!-- search and replace  github_repro & netlify  -->
+<!--  -->
 
 <p align="center">
   <a href="mailto:a.quinkenstein@gmail.com"><img src="https://image.flaticon.com/icons/svg/725/725643.svg" height="20" width="20" /></a>
@@ -11,14 +11,20 @@
   <h3 align="center">MOVIEAPP CodeSchool Test</h3>
 
 <br />
-<p align="left">
-   Objective: 
-    Display Movies, mark favorite, which are then shown on the top of the list. 
-    Click on Movie to display its Poster. 
-    <br />
-    Logic is finished in a two hour test. Styling still tbd. 
-    <br />
-      <a href="https://aquin-movies.netlify.app/">Demo</a>
+
+<p align="center">
+  <a href="aquin-movies.netlify.app/">
+    <img src="https://i.imgur.com/G23xev4.png" alt="Logo" width="300" height="160">
+  </a>
+  <p align="left">
+    Objective: 
+      Display Movies, mark favorite, which are then shown on the top of the list. 
+      Click on Movie to display its Poster. 
+      <br />
+      Logic is finished in a two hour test. Styling still tbd. 
+      <br />
+        <a href="https://aquin-movies.netlify.app/">Demo</a>
+  </p>
 </p>
 
 ## Task
