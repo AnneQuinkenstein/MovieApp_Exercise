@@ -37,9 +37,9 @@ body {
   }
 }
 
-h1{
-  @include stealtitle(); 
-  text-align: center; 
+h1 {
+  @include stealtitle();
+  text-align: center;
   font-weight: 900;
   font-size: 4vh;
   letter-spacing: 10px;
@@ -100,6 +100,10 @@ h1{
       position: absolute;
       left: 1vw;
       top: 1vh;
+      @media (max-width: 767px) {
+        top: unset; 
+        bottom: 1vh; 
+      }
       .fa-long-arrow-left {
         font-size: 40px;
         color: #abb2b9;
@@ -132,12 +136,17 @@ h1{
       }
     }
     .infos {
-      @include stealtitle() width: 40vw;
+      @include stealtitle(); 
+      width: 40vw;
       margin-top: 10vh;
       min-width: 300px;
       font-weight: 900;
       font-size: 1.05rem;
       margin-right: 5vw;
+      @media (max-width: 767px) {
+        margin: 5vw;
+        width: unset; 
+      }
     }
     .row {
       display: flex;
