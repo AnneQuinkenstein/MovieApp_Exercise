@@ -6,11 +6,6 @@
   <a href="https://linkedin.com/in/AnneQuinkenstein"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" height="20"     width="20" /></a>
 </p>
 
-<!-- PROJECT LOGO -->
-
-  
-
-<br />
 <h3 align="center">MOVIEAPP CodeSchool Test</h3>
 <br />
 <p align="center">
