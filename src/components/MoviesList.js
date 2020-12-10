@@ -2,8 +2,15 @@ import React from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import Movie from "./Movie";
 
-const MoviesList = ({ data, changeFavorites, displayCategories, display }) => {
-  data && data.movies.sort((a, b) => b.favorite - a.favorite);
+const MoviesList = ({
+  data,
+  filteredMovies, 
+  changeFavorites,
+  displayCategories,
+  display,
+  handleGenre,
+}) => {
+  filteredMovies && filteredMovies.sort((a, b) => b.favorite - a.favorite);
 
   return (
     <>
@@ -14,18 +21,26 @@ const MoviesList = ({ data, changeFavorites, displayCategories, display }) => {
             alt="filter"
             onClick={displayCategories}
           />
-         { display && <ul class="animate">
-            {data &&
-              data.genres.map((genre) => {
-                return <li class="animate">{genre}</li>;
-              })}
-          </ul> }
+          {display && (
+            <ul class="animate">
+              <li onClick={(e) => handleGenre("all")}> all</li>
+              {data &&
+                data.genres.map((genre) => {
+                  return (
+                    <li onClick={(e) => handleGenre({ genre })} key={genre}>
+                      {" "}
+                      {genre}
+                    </li>
+                  );
+                })}
+            </ul>
+          )}
         </div>
         <h1> Famous Movies </h1>
       </div>
       <div className="App">
-        {data &&
-          data.movies.map((movie, index) => (
+        {filteredMovies &&
+          filteredMovies.map((movie, index) => (
             <SwitchTransition>
               <CSSTransition key={movie.favorite} classNames="singleMovie">
                 <Movie

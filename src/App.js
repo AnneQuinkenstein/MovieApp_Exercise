@@ -7,16 +7,18 @@ import DisplayMovie from "./components/DisplayMovie";
 const App = () => {
   const [data, setData] = useState(null);
   const [render, setRender] = useState(true);
-  const [display, setDisplay] = useState(false); 
+  const [display, setDisplay] = useState(false);
+  const [filteredMovies, setFilteredMovies] = useState(null);
 
   const fetchData = () => {
     fetch(
       `https://raw.githubusercontent.com/wildcodeschoolparis/datas/master/movies.json`
     )
       .then((res) => res.json())
-      .then((data) => { 
-        data.movies.map(movie => movie.favorite = false); 
+      .then((data) => {
+        data.movies.map((movie) => (movie.favorite = false));
         setData(data);
+        setFilteredMovies(data.movies); 
       });
   };
 
@@ -26,16 +28,27 @@ const App = () => {
 
   const changeFavorites = (movie, index) => {
     movie.favorite
-      ? (data.movies[index].favorite = false)
-      : (data.movies[index].favorite = true);
+      ? (filteredMovies[index].favorite = false)
+      : (filteredMovies[index].favorite = true);
     setRender(!render);
   };
 
-  console.log(display); 
+  const displayCategories = () => {
+    setDisplay(!display);
+  };
 
-  const displayCategories = () =>{
-   setDisplay(!display); 
-  }
+  const handleGenre = (genre) => { 
+   
+    if (genre === "all"){
+      setFilteredMovies(data.movies) 
+    } else {
+      setFilteredMovies(data.movies.filter((movie) =>
+        movie.genres.includes(genre.genre)));
+      }
+  
+    setDisplay(false);
+    console.log(filteredMovies)
+  };
 
   return (
     <div>
@@ -47,9 +60,11 @@ const App = () => {
           render={() => (
             <MoviesList
               data={data}
+              filteredMovies={filteredMovies}
               changeFavorites={changeFavorites}
               displayCategories={displayCategories}
               display={display}
+              handleGenre={handleGenre}
             />
           )}
         />
