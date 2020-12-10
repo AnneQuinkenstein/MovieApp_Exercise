@@ -17,14 +17,68 @@ $shadows-big: multiple-box-shadow(100);
   -webkit-text-fill-color: transparent;
 }
 
+@mixin stealtitle2 {
+  background: -webkit-linear-gradient(rgb(112, 151, 173), #97c4f1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body {
-  //background-image: url(./bokeh-photography-720459.jpg);
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  background-attachment: fixed;
+  min-height: 100%;
+  min-width: 100%;
   font-family: "lato", sans-serif;
+}
+
+.movieTitle {
+  display: flex;
+  justify-content: center;
+  div {
+    display: inline-block;
+    margin: 20px 50px;
+    img {
+      position: absolute;
+      left: 8vh;
+      top: 2vh;
+      height: 50px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    ul {
+      position: absolute;
+      z-index: 20;
+      left: 10vw;
+      top: 0vh;
+      background-color: #38495adb;
+      color: white;
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      height: 97vh;
+      justify-content: space-evenly;
+      border-radius: 2px;
+      li {
+        display: block;
+        width: 190px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  h1 {
+    @include stealtitle();
+    text-align: center;
+    font-weight: 900;
+    font-size: 4vh;
+    letter-spacing: 10px;
+    margin-top: 2vh;
+  }
 }
 
 .singleMovie {
@@ -35,15 +89,6 @@ body {
     width: unset;
     height: unset;
   }
-}
-
-h1 {
-  @include stealtitle();
-  text-align: center;
-  font-weight: 900;
-  font-size: 4vh;
-  letter-spacing: 10px;
-  margin-top: 2vh;
 }
 
 .App {
@@ -70,9 +115,7 @@ h1 {
       height: 25vh;
       margin: 20px;
       border-radius: 10px;
-      box-shadow:
-        rgba(white, 0.66) 0 30px 60px 0,
-        inset #333 0 0 0 5px,
+      box-shadow: rgba(white, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
         inset rgba(black, 0.5) 0 0 0 6px;
       img {
         flex-shrink: 0;
@@ -106,8 +149,8 @@ h1 {
       left: 1vw;
       top: 1vh;
       @media (max-width: 767px) {
-        top: unset; 
-        bottom: 1vh; 
+        top: unset;
+        bottom: 1vh;
       }
       .fa-long-arrow-left {
         font-size: 40px;
@@ -141,16 +184,15 @@ h1 {
       }
     }
     .infos {
-      @include stealtitle(); 
+      @include stealtitle2();
       width: 40vw;
-      margin-top: 10vh;
       min-width: 300px;
       font-weight: 900;
-      font-size: 1.05rem;
+      font-size: 1.4rem;
       margin-right: 5vw;
       @media (max-width: 767px) {
         margin: 5vw;
-        width: unset; 
+        width: unset;
       }
     }
     .row {
@@ -257,16 +299,16 @@ h1 {
 .singleMovie-enter {
   opacity: 0;
 }
-.singleMovie-exit{
+.singleMovie-exit {
   opacity: 1;
 }
-.singleMovie-enter-active{
+.singleMovie-enter-active {
   opacity: 1;
 }
-.singleMovie-exit-active{
+.singleMovie-exit-active {
   opacity: 0;
 }
 .singleMovie-enter-active,
-.singleMovie-exit-active{
+.singleMovie-exit-active {
   transition: opacity 500ms;
 }

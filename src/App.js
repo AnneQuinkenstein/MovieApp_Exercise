@@ -7,6 +7,7 @@ import DisplayMovie from "./components/DisplayMovie";
 const App = () => {
   const [data, setData] = useState(null);
   const [render, setRender] = useState(true);
+  const [display, setDisplay] = useState(false); 
 
   const fetchData = () => {
     fetch(
@@ -30,7 +31,11 @@ const App = () => {
     setRender(!render);
   };
 
-  console.log(data && data.genres); 
+  console.log(display); 
+
+  const displayCategories = () =>{
+   setDisplay(!display); 
+  }
 
   return (
     <div>
@@ -43,7 +48,8 @@ const App = () => {
             <MoviesList
               data={data}
               changeFavorites={changeFavorites}
-              render={render}
+              displayCategories={displayCategories}
+              display={display}
             />
           )}
         />
